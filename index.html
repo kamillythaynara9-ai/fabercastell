@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faber-Castell | Lápis, canetas e material de arte com pedido pelo WhatsApp</title>
+  <meta name="description" content="Lápis de cor, grafites, canetas, marcadores e material escolar Faber-Castell. Escolha no catálogo e finalize o pedido pelo WhatsApp.">
+  <meta property="og:title" content="Faber-Castell · Catálogo">
+  <meta property="og:description" content="Cores que contam histórias desde 1761. Escolha no catálogo e peça pelo WhatsApp.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0B3D2E">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="pular" href="#catalogo">Pular para o catálogo</a>
+
+  <header class="topo" id="topo">
+    <div class="container topo-inner">
+      <a href="#inicio" class="marca" aria-label="Faber-Castell, início">
+        <img src="logo.png" alt="Logo Faber-Castell" width="150" height="49">
+      </a>
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="topo-acoes">
+        <button class="btn-carrinho" id="abrirCarrinho" aria-label="Abrir carrinho">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="contador" id="contador">0</span>
+        </button>
+        <a class="btn btn-whats btn-pequeno esconde-mobile" href="#" data-whats="Olá! Vim pelo site da Faber-Castell e quero tirar uma dúvida." target="_blank" rel="noopener">WhatsApp</a>
+        <button class="hamburguer" id="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-texto">
+          <span class="selo">Desde 1761 · Qualidade que passa de geração em geração</span>
+          <h1>Cores que contam histórias <em>desde 1761.</em></h1>
+          <p>Lápis de cor, grafites, canetas e material de arte para a escola, o escritório e o ateliê. Monte o seu pedido aqui e finalize pelo WhatsApp.</p>
+          <div class="hero-botoes">
+            <a href="#catalogo" class="btn btn-claro">Ver catálogo</a>
+            <a href="#" class="btn btn-contorno" data-whats="Olá! Quero conhecer os kits de volta às aulas da Faber-Castell." target="_blank" rel="noopener">Kits volta às aulas</a>
+          </div>
+          <ul class="hero-provas">
+            <li><b>260+</b> anos de história</li>
+            <li><b>Madeira</b> de reflorestamento</li>
+            <li><b>Pix</b> e cartão</li>
+          </ul>
+        </div>
+        <div class="hero-arte" aria-hidden="true">
+          <svg class="leque" viewBox="0 0 420 420" id="leque"></svg>
+          <div class="bolha b1">Frete grátis acima de R$ 199</div>
+          <div class="bolha b2">Embalagem para presente</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categorias secao" aria-labelledby="tituloCategorias">
+      <div class="container">
+        <p class="sobretitulo">Coleções</p>
+        <h2 id="tituloCategorias" class="titulo-secao">Compre por categoria</h2>
+        <div class="cat-grade" id="catGrade"></div>
+      </div>
+    </section>
+
+    <section class="catalogo secao" id="catalogo" aria-labelledby="tituloCatalogo">
+      <div class="container">
+        <div class="catalogo-topo">
+          <div>
+            <p class="sobretitulo">Catálogo</p>
+            <h2 id="tituloCatalogo" class="titulo-secao">Escolha os seus favoritos</h2>
+          </div>
+          <label class="busca">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="sr">Buscar produto</span>
+            <input type="search" id="busca" placeholder="Buscar lápis de cor, caneta, estojo...">
+          </label>
+        </div>
+        <div class="filtros" id="filtros" role="tablist" aria-label="Filtrar por categoria"></div>
+        <div class="produtos" id="produtos" aria-live="polite"></div>
+        <p class="vazio" id="semResultado" hidden>Nenhum produto encontrado. Tente outra palavra ou fale com a gente no WhatsApp.</p>
+      </div>
+    </section>
+
+    <section class="sobre secao" id="sobre" aria-labelledby="tituloSobre">
+      <div class="container sobre-inner">
+        <div class="sobre-texto revelar">
+          <p class="sobretitulo">Nossa história</p>
+          <h2 id="tituloSobre" class="titulo-secao">Do primeiro lápis ao seu próximo desenho</h2>
+          <p>Desde 1761, a Faber-Castell transforma madeira, grafite e pigmento em ferramentas para quem escreve, desenha e cria. São mais de 260 anos de tradição, com o mesmo cuidado em cada traço, do caderno da escola ao ateliê do artista.</p>
+          <ul class="diferenciais">
+            <li><span class="dif-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c4 3 6 6.5 6 10a6 6 0 0 1-12 0c0-3.5 2-7 6-10z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 21v-8" stroke="currentColor" stroke-width="1.8"/></svg></span><div><b>Madeira certificada</b>Lápis feitos com madeira de florestas plantadas e manejadas.</div></li>
+            <li><span class="dif-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 12.5l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><b>Qualidade de origem</b>Cores intensas, ponta resistente e traço macio.</div></li>
+            <li><span class="dif-icone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v4H4zM6 11v9h12v-9M12 7v13M12 7c-2-4-6-3-5 0M12 7c2-4 6-3 5 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><div><b>Para presentear</b>Estojos e kits com embalagem especial, prontos para presente.</div></li>
+          </ul>
+        </div>
+        <div class="sobre-foto revelar">
+          <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1200&q=80&auto=format&fit=crop" alt="Lápis de cor organizados lado a lado sobre a mesa" loading="lazy" onerror="this.parentElement.classList.add('sem-foto');this.remove()">
+          <div class="sobre-ano"><b>1761</b><span>ano de fundação</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="como secao" aria-labelledby="tituloComo">
+      <div class="container">
+        <p class="sobretitulo centro">Simples assim</p>
+        <h2 id="tituloComo" class="titulo-secao centro">Como comprar</h2>
+        <ol class="passos">
+          <li class="revelar"><span class="num">1</span><b>Escolha</b><p>Navegue pelo catálogo e adicione os produtos ao carrinho.</p></li>
+          <li class="revelar"><span class="num">2</span><b>Envie pelo WhatsApp</b><p>Toque em finalizar e a lista vai pronta para a nossa equipe.</p></li>
+          <li class="revelar"><span class="num">3</span><b>Receba ou retire</b><p>Combine a entrega ou retire na loja. Pague com Pix ou cartão.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contato secao" id="contato" aria-labelledby="tituloContato">
+      <div class="container contato-inner">
+        <div class="contato-info revelar">
+          <p class="sobretitulo">Atendimento</p>
+          <h2 id="tituloContato" class="titulo-secao">Fale com a gente</h2>
+          <dl>
+            <div><dt>Endereço</dt><dd>Av. Paulista, 1000, Bela Vista, São Paulo</dd></div>
+            <div><dt>Horário</dt><dd>Seg a sex, 9h às 19h · Sáb, 9h às 15h</dd></div>
+            <div><dt>Pagamento</dt><dd>Pix, cartão de crédito em até 6x e débito</dd></div>
+            <div><dt>Entrega</dt><dd>Para todo o Brasil. Grátis acima de R$ 199.</dd></div>
+          </dl>
+          <a href="#" class="btn btn-whats" data-whats="Olá! Quero fazer um pedido na Faber-Castell." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+        <div class="mapa revelar">
+          <iframe title="Mapa com a localização da loja" src="https://www.google.com/maps?q=Avenida%20Paulista%201000%20S%C3%A3o%20Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="faixa-cores" aria-hidden="true"></div>
+    <div class="container rodape-inner">
+      <div class="rodape-marca">
+        <img src="logo-branco.png" alt="Logo Faber-Castell" width="180" height="59" loading="lazy">
+        <p>Lápis, canetas e material de arte com pedido pelo WhatsApp.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="sociais">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+        <a href="#" data-whats="Olá!" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg></a>
+      </div>
+    </div>
+    <p class="direitos">© <span id="ano">2026</span> Faber-Castell. Todos os direitos reservados.</p>
+  </footer>
+
+  <a href="#" class="whats-flutuante" data-whats="Olá! Vim pelo site da Faber-Castell." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+  </a>
+
+  <div class="sobreposicao" id="sobreposicao" hidden></div>
+
+  <aside class="gaveta" id="gaveta" aria-label="Carrinho" aria-hidden="true">
+    <div class="gaveta-topo">
+      <h2>Seu carrinho</h2>
+      <button class="fechar" id="fecharCarrinho" aria-label="Fechar carrinho">×</button>
+    </div>
+    <ul class="itens" id="itens"></ul>
+    <p class="vazio" id="carrinhoVazio">Seu carrinho está vazio. Que tal uma caixa de lápis de cor?</p>
+    <div class="gaveta-rodape">
+      <div class="total"><span>Total</span><b id="total">R$ 0,00</b></div>
+      <button class="btn btn-whats largura-total" id="finalizar" disabled>Finalizar pedido no WhatsApp</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalNome" hidden>
+    <div class="modal-caixa">
+      <button class="fechar" id="fecharModal" aria-label="Fechar">×</button>
+      <div class="modal-arte" id="modalArte"></div>
+      <div class="modal-info">
+        <span class="modal-cat" id="modalCat"></span>
+        <h3 id="modalNome"></h3>
+        <p id="modalDesc"></p>
+        <div id="modalOpcoes"></div>
+        <div class="modal-compra">
+          <div class="qtd" aria-label="Quantidade">
+            <button type="button" id="menos" aria-label="Diminuir">−</button>
+            <output id="qtd">1</output>
+            <button type="button" id="mais" aria-label="Aumentar">+</button>
+          </div>
+          <button class="btn btn-primario" id="adicionarModal">Adicionar · <span id="modalPreco"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
